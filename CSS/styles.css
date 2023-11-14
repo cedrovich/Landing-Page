@@ -1,29 +1,49 @@
 :root{
     --blanco:#ffffff;
     --negro:#212121;
-    --gris:#999999;
+    --gris:#bebebe;
     --color1:#1a2958;
     --color2:#16a9b9;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif
+}
+
+main{
+    background-color: var(--gris);
+    
+}
+
+/*Diseño Responsive*/
+@media (min-width: 768px) {
+    .apps-logo{
+        align-items: center;
+        max-width: 768px;
+        flex-direction: row;
+        margin:0
+    }
 }
 
 /*Titulo*/
 .titulo{
     display: flex;
     justify-content: center;
-    text-align: center;
-    flex-direction: column;
     background-color: var(--negro);
+    align-items: center; 
 }
 
-.titulo p{
+.titulo img{
     margin: 0;
-    padding: 1rem 1rem;
-    color: var(--blanco);
+    padding: 2rem 1rem;
+    width: 7rem;
 }
 
 /*Contenido*/
 .contenido{
     background-color: var(--gris);
+    align-items: center;
+    display: flex;
 }
 
 .contenido p{
@@ -31,20 +51,56 @@
     padding: 3rem;
 }
 
-.imagen{
-    padding: 1rem;
-    align-items: end;
-    display: flex;
+.img-banda{
+    margin: 6rem 2rem;
+    justify-content: center;
+    width: 24rem;
+    box-shadow: 0px 6px 30px 0px rgba(0,0,0,0.51);
+        -webkit-box-shadow: 0px 6px 30px 0px rgba(0,0,0,0.51);
+        -moz-box-shadow: 0px 6px 30px 0px rgba(0,0,0,0.51);
 }
+
+.conciertos{
+    padding: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.conciertos label{
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.boton-fechas{
+    background-color: var(--blanco);
+    padding: .6rem 2rem;
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--negro);
+    font-weight: bold;
+}
+
 
 .apps{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content:center;
+    font-weight: bold;
+    align-items: center;
+    background-color: var(--blanco);
 }
 
-.apps img{
+.apps-logo img{
     width: 3rem;
     margin: 1rem 2rem;
+    cursor: pointer;
+}
+
+.apps p{
+    font-weight: bold;
+    align-items: center;
 }
 
 /*Footer*/
@@ -55,4 +111,9 @@
 
 .footer p{
     margin: 0;
+    padding: 1rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
+
