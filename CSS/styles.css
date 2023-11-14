@@ -16,13 +16,16 @@ main{
 }
 
 /*Diseño Responsive*/
-@media (min-width: 768px) {
-    .apps-logo{
-        align-items: center;
-        max-width: 768px;
-        flex-direction: row;
-        margin:0
+@media (max-width: 768px) {
+    .contenido{
+        background-image: url(../img/banda2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 300px;
+        position: relative;
+        margin-bottom: 2rem;
     }
+
 }
 
 /*Titulo*/
@@ -58,6 +61,35 @@ main{
     box-shadow: 0px 6px 30px 0px rgba(0,0,0,0.51);
         -webkit-box-shadow: 0px 6px 30px 0px rgba(0,0,0,0.51);
         -moz-box-shadow: 0px 6px 30px 0px rgba(0,0,0,0.51);
+}
+
+/*video*/
+
+.video-main{
+    display: flex;
+
+}
+
+.video{
+    display: flex;
+    padding: 2rem;
+    margin-left: 6rem;
+    position: relative;
+}
+
+.video-text{
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1.8rem;
+}
+
+.video-text label{
+    font-weight: bold;
+}
+
+.video-musica{
+    width: 560px;
+    height: 315px;
 }
 
 .conciertos{
@@ -96,6 +128,7 @@ main{
     width: 3rem;
     margin: 1rem 2rem;
     cursor: pointer;
+    padding-bottom: 1rem;
 }
 
 .apps p{
