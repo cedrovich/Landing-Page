@@ -1,23 +1,29 @@
-:root{
-    --blanco:#ffffff;
-    --negro:#212121;
-    --gris:#bebebe;
-    --color1:#1a2958;
-    --color2:#16a9b9;
+:root {
+    --blanco: #ffffff;
+    --negro: #212121;
+    --gris: #bebebe;
+    --color1: #1a2958;
+    --color2: #16a9b9;
 }
 
-html{
+html {
     font-family: Arial, Helvetica, sans-serif
 }
 
-main{
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+main {
     background-color: var(--gris);
-    
+
 }
 
 /*Diseño Responsive*/
 @media (max-width: 768px) {
-    .contenido{
+    .contenido {
         background-image: url(../img/banda2.jpg);
         background-repeat: no-repeat;
         background-size: cover;
@@ -29,83 +35,103 @@ main{
 }
 
 /*Titulo*/
-.titulo{
+.titulo {
     display: flex;
     justify-content: center;
     background-color: var(--negro);
-    align-items: center; 
+    align-items: center;
 }
 
-.titulo img{
+.titulo img {
     margin: 0;
     padding: 2rem 1rem;
     width: 7rem;
 }
 
 /*Contenido*/
-.contenido{
-    background-color: var(--gris);
-    align-items: center;
-    display: flex;
-}
 
-.contenido p{
+
+.contenido p {
     margin: 0;
     padding: 3rem;
 }
 
-.img-banda{
-    margin: 6rem 2rem;
+.hero {
+    background-image: url(../img/banda2.jpg);
+    /*../ te saca de la carpeta que estas*/
+    background-repeat: no-repeat;
+    /*Evita que la imagen se repita al agrandar la ventana*/
+    background-size: cover;
+    /*Cubre todo con la imagen*/
+    height: 450px;
+    /*ALtura*/
+    position: relative;
+    /*Posicion, el padre siempre es Relative*/
+    margin-bottom: 2rem;
+    background-color: rgba(0, 0, 0, .8);
+    /*.7 es el valor de la transparencia*/
+}
+
+.hero-container {
+    position: absolute;
+    /*Posicion, el hijo siempre es Absolute*/
+    background-color: rgba(0, 0, 0, .7);
+    /*.7 es el valor de la transparencia*/
+    width: 100%;
+    /*El efecto abarcara todo el ancho*/
+    height: 100%;
+    /*El efecto abarcara todo lo largo*/
+
+    /*Alinear la imagen*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    width: 24rem;
-    box-shadow: 0px 6px 30px 0px rgba(0,0,0,0.51);
-        -webkit-box-shadow: 0px 6px 30px 0px rgba(0,0,0,0.51);
-        -moz-box-shadow: 0px 6px 30px 0px rgba(0,0,0,0.51);
+}
+
+.hero-container p {
+    color: var(--blanco);
+    padding: 1rem;
+    font-weight: bold;
+    text-align: justify;
 }
 
 /*video*/
 
-.video-main{
+.video {
     display: flex;
-
-}
-
-.video{
-    display: flex;
+    flex-direction: column;
     padding: 2rem;
-    margin-left: 6rem;
     position: relative;
+    text-align: center;
 }
 
-.video-text{
+.video-text {
     align-items: center;
     flex-direction: column;
     margin-top: 1.8rem;
 }
 
-.video-text label{
+.video-text label {
     font-weight: bold;
 }
 
-.video-musica{
-    width: 560px;
-    height: 315px;
-}
-
-.conciertos{
+.conciertos {
+    margin: 4rem 0;
     padding: 1.6rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
 }
 
-.conciertos label{
+.conciertos label {
     margin-bottom: 1rem;
     font-weight: bold;
 }
 
-.boton-fechas{
+.boton {
     background-color: var(--blanco);
     padding: .6rem 2rem;
     border-radius: 20px;
@@ -115,38 +141,38 @@ main{
 }
 
 
-.apps{
+.apps {
     display: flex;
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
     font-weight: bold;
     align-items: center;
     background-color: var(--blanco);
+    margin: 4rem 0;
 }
 
-.apps-logo img{
+.apps-logo img {
     width: 3rem;
     margin: 1rem 2rem;
     cursor: pointer;
     padding-bottom: 1rem;
 }
 
-.apps p{
+.apps p {
     font-weight: bold;
     align-items: center;
 }
 
 /*Footer*/
-.footer{
+.footer {
     background-color: var(--negro);
     color: var(--blanco);
 }
 
-.footer p{
+.footer p {
     margin: 0;
     padding: 1rem;
     display: flex;
     text-align: center;
     justify-content: center;
 }
-
