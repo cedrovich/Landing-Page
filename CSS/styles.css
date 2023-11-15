@@ -2,12 +2,10 @@
     --blanco: #ffffff;
     --negro: #212121;
     --gris: #bebebe;
-    --color1: #1a2958;
-    --color2: #16a9b9;
 }
 
 html {
-    font-family: Arial, Helvetica, sans-serif
+    font-family: 'Kanit', sans-serif;
 }
 
 *,
@@ -18,19 +16,6 @@ html {
 
 main {
     background-color: var(--gris);
-
-}
-
-/*Diseño Responsive*/
-@media (max-width: 768px) {
-    .contenido {
-        background-image: url(../img/banda2.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 300px;
-        position: relative;
-        margin-bottom: 2rem;
-    }
 
 }
 
@@ -62,6 +47,7 @@ main {
     background-repeat: no-repeat;
     /*Evita que la imagen se repita al agrandar la ventana*/
     background-size: cover;
+    background-position: center;
     /*Cubre todo con la imagen*/
     height: 450px;
     /*ALtura*/
@@ -91,8 +77,7 @@ main {
 
 .hero-container p {
     color: var(--blanco);
-    padding: 1rem;
-    font-weight: bold;
+    padding: 4rem;
     text-align: justify;
 }
 
@@ -101,7 +86,7 @@ main {
 .video {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 0 2rem;
     position: relative;
     text-align: center;
 }
@@ -117,7 +102,7 @@ main {
 }
 
 .conciertos {
-    margin: 4rem 0;
+    margin-bottom: 1.5rem;
     padding: 1.6rem;
     display: flex;
     align-items: center;
@@ -140,6 +125,11 @@ main {
     font-weight: bold;
 }
 
+.boton:hover{
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+
 
 .apps {
     display: flex;
@@ -148,7 +138,7 @@ main {
     font-weight: bold;
     align-items: center;
     background-color: var(--blanco);
-    margin: 4rem 0;
+    margin: 0;
 }
 
 .apps-logo img {
